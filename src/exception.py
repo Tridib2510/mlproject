@@ -1,6 +1,4 @@
-import logging
-from logger import *  # This will configure logging to your log file
-
+from src.logger import logging
 
 import sys 
 # Any exception that is getting controlled the sys
