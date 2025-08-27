@@ -5,7 +5,7 @@ import logging
 import os
 from datetime import datetime
 
-LOG_FILE=f"{datetime.now().strftime("%m_%d_%Y_%H_%M_%S")}.log"
+LOG_FILE=f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
 # .strftime("%m_%d_%Y_%H_%M_%S") → Formats the datetime into a
 # string like 08_24_2025_12_10_33.
 
