@@ -11,6 +11,9 @@ from dataclasses import dataclass
 #dataclass is a decorater.Initially a class variable is defined by init
 # but with this dataclass we will be directly able to define our 
 # class variable
+
+from src.components.data_transformation import DataTransformation
+from src.components.data_transformation import DataTransformationConfig
 @dataclass 
 class DataIngestionConfig:
     # Inputs that we are giving to the DataIngestion component
@@ -48,7 +51,9 @@ class DataIngestion:
 
 if __name__=="__main__":
     obj=DataIngestion()
-    obj.initiate_data_ingestion()
+    train_data,test_data=obj.initiate_data_ingestion()
     
+    data_transformation=DataTransformation()
+    data_transformation.initiate_data_transformation(train_data,test_data)
 
 
